@@ -1,6 +1,6 @@
-**Simple charts for token balance on MultiPoolHub account**
+**Simple charts for token balance on MiningPoolHub account**
 
-Simple script fetching balance for user selected token on the MultiPoolHub and displaying a chart utilizing Google Charts
+Simple script fetching balance for user selected token on the MiningPoolHub and displaying a chart utilizing Google Charts
 
 
 **Installation:**
