@@ -23,7 +23,7 @@ if ($coin == null) {
 function mph_get($url)
 {
 	$cn = curl_init($url);
-	curl_setopt($cn, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($cn, CURLOPT_RETURNTRANSFER, 1);
 	$output = curl_exec($cn);
 	curl_close($cn);
 	return json_decode($output, true);
@@ -66,11 +66,16 @@ $balArray = array_reverse($result['getdashboarddata']['data']['recent_credits'])
           var options = {
           title: '<?php echo "$coin"; ?> Balance',
           curveType: 'function',
-          legend: { position: 'bottom' }
+          legend: { position: 'none' },
+	  crosshair: { trigger: 'both' },
+	  vAxis: {
+  		viewWindow: {
+     			 min: 0
+  	        }
+	}
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
         chart.draw(data, options);
       }
     </script>
